@@ -1,7 +1,8 @@
 <rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0">
     <channel>
-        <title>Categories - Category - </title>
-        <link>//localhost:1313/categories/</link>
-        <description>Categories - Category - </description>
-        <generator>Hugo -- gohugo.io</generator><language>en</language><atom:link href="//localhost:1313/categories/" rel="self" type="application/rss+xml" /></channel>
+        <title>Categories - Category - Matthew Zirpoli</title>
+        <link>http://localhost:1313/categories/</link>
+        <description>Categories - Category - Matthew Zirpoli</description>
+        <generator>Hugo -- gohugo.io</generator><language>en</language><managingEditor>zirpoli.matthew@gmail.com (Matthew Zirpoli)</managingEditor>
+            <webMaster>zirpoli.matthew@gmail.com (Matthew Zirpoli)</webMaster><atom:link href="http://localhost:1313/categories/" rel="self" type="application/rss+xml" /></channel>
 </rss>

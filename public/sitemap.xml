@@ -2,9 +2,9 @@
     xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
     xmlns:xhtml="http://www.w3.org/1999/xhtml"
     ><url>
-            <loc>//localhost:1313/</loc></url><url>
-            <loc>//localhost:1313/about/</loc></url><url>
-            <loc>//localhost:1313/posts/matt_harrison/</loc></url><url>
-            <loc>//localhost:1313/categories/</loc></url><url>
-            <loc>//localhost:1313/posts/</loc></url><url>
-            <loc>//localhost:1313/tags/</loc></url></urlset>
+            <loc>http://localhost:1313/about/</loc><lastmod>2025-06-14T23:37:53-06:00</lastmod></url><url>
+            <loc>http://localhost:1313/</loc><lastmod>2025-06-14T22:20:15-06:00</lastmod></url><url>
+            <loc>http://localhost:1313/posts/matt_harrison/</loc><lastmod>2025-06-09T22:28:16-06:00</lastmod></url><url>
+            <loc>http://localhost:1313/categories/</loc></url><url>
+            <loc>http://localhost:1313/posts/</loc><lastmod>2025-06-09T22:28:16-06:00</lastmod></url><url>
+            <loc>http://localhost:1313/tags/</loc></url></urlset>
