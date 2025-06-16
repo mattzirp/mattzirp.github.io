@@ -31,7 +31,7 @@ We can also walk across the game_plays_players table to the player_info table to
 
 The image below shows a glance of the dataset tables and columns we will make use of, as well as how they are mapped to one another. 
 
-![Dataset table map](/dataset_map.png)
+![Dataset table map](/projects/hockey_shot_analysis/images/dataset_map.png)
 
 ## Tools
 
@@ -63,7 +63,7 @@ We want to answer basic questions about shots and goals. What types of shots are
 
 To answer questions about shot types, we can simply group and aggregate our data using `pandas`. The plot below shows us the success rate of different shot types
 
-![Accuracy by Shot Type Bar Chart](/shot_accuracy_bar.png)
+![Accuracy by Shot Type Bar Chart](/projects/hockey_shot_analysis/images/shot_accuracy_bar.png)
 
 To answer questions about locations, we can take several approaches. First we take a purely mathematical approach by using distance and angle calculations to determine how far the shooter is and what angle off center they are for shots. We perform this using `pandas` to calculate new columns using the formulas:
 
@@ -77,13 +77,13 @@ We also 'flip' the coordinates of each shot and goal to make it as though they a
 
 Next we can visualize the distribution of shot distances and angles for shots and goals to see the common behaviors in shooting and how these effect scoring. The plot below shows the distributions of distance and shot angle for goals. We see that the closer to center and the closer to goal a player is, the more likely they are to score. 
 
-![Shot Distance Distribution for Goals](/goal_distance_histogram.png)
+![Shot Distance Distribution for Goals](/projects/hockey_shot_analysis/images/goal_distance_histogram.png)
 
-![Shot Angle Distribution for Goals](/shot_angle_goal_histogram.png)
+![Shot Angle Distribution for Goals](/projects/hockey_shot_analysis/images/shot_angle_goal_histogram.png)
 
 A better visual approach, however may be to show *density* of shots overlaid with a visual of a hockey rink. We use an open source package, sportpy to plot the ice surface underneath a heatmap to show us where shots and goals are most common. We can repeat this analysis for each shot type, showing us where shot types tend to come from, and succeed from, as well. Below, we see a heatmap visualization for all shot types, then a multiplot showing the heatmap for each individual shot type. This better contextualizes the same info we saw in the distance and angles to the actual game that we are considering!
 
-![Shot Location Density Heatmap](/shot_location_heatmap.png)
+![Shot Location Density Heatmap](/projects/hockey_shot_analysis/images/shot_location_heatmap.png)
 
 ### Time Series Analysis
 We want to answer questions related to how shooting and goal scoring might vary over time. We approach this from two mindsets, changes over time within a game, and changes over the course of many seasons. 
@@ -92,44 +92,44 @@ To calculate in game time, we are given a period of play and the number of secon
 
 To study trends over seasons, we merge our season data from the games table, then using pandas grouping and aggregation functions to identify trends. Here, we must filter our shots data as the amount collected prior to 2011 for shots, and shot type is insufficient. The plots below show upward trends in
 
-![Total Shots per Season (2011-2020)](/shots_by_season_trend.png)
+![Total Shots per Season (2011-2020)](/projects/hockey_shot_analysis/images/shots_by_season_trend.png)
 
-![Goals per Season (2001 - 2020)](/goals_by_season_trend.png)
+![Goals per Season (2001 - 2020)](/projects/hockey_shot_analysis/images/goals_by_season_trend.png)
 
 
 We also found that players have recently started to favor shooting wrist shots even more than usual. The plot below shows the percentage of total shots taken for each shot type. We note downward trends for slap shots, and upward trends for wrist shots.
 
-![Percentage of Shots by Shot Type (2011-2020)](/percentage_of_shots_by_shot_type_season.png)
+![Percentage of Shots by Shot Type (2011-2020)](/projects/hockey_shot_analysis/images/percentage_of_shots_by_shot_type_season.png)
 
 
 We again repeat our heatmap visualization of the location density over seasons, to show where shots are most often coming from when they result in goals. The below multiplot shows a heatmap for each season from 2011 to 2020. We note that there is no major trend in where goals are scored from, as always it's about getting pucks to the net!
 
-![Goal Location Density by Season (2011 - 2020)](/goal_density_by_season.png)
+![Goal Location Density by Season (2011 - 2020)](/projects/hockey_shot_analysis/images/goal_density_by_season.png)
 
 
 ### Game Situation Analysis
 
 To analyze different game situations we look at several key scenarios, which may play a role in what type of shot a player chooses to make. The first situation is when a team is winning or losing. We will compare winning and losing teams shot types using double bar plots and visualize the positions where they shoot from.
 
-![Shot Types Filtered by Winning and Losing Teams](/winning_losing_shots.png)
+![Shot Types Filtered by Winning and Losing Teams](/projects/hockey_shot_analysis/images/winning_losing_shots.png)
 
-![Goals Filtered by Winning and Losing Teams](/winning_losing_goals.png)
+![Goals Filtered by Winning and Losing Teams](/projects/hockey_shot_analysis/images/winning_losing_goals.png)
 
-![Positions of Goals Filtered by Winning and Losing Teams in October 2018](/winning_losing_october.png)
+![Positions of Goals Filtered by Winning and Losing Teams in October 2018](/projects/hockey_shot_analysis/images/winning_losing_october.png)
 
-![Positions of Goals Filtered by Winning and Losing Teams in April 2018](/winning_losing_april.png)
+![Positions of Goals Filtered by Winning and Losing Teams in April 2018](/projects/hockey_shot_analysis/images/winning_losing_april.png)
 
 Our next scenario is before and after a goal has been scored. This will allow us to see if players choose different shots based on how well a goalie is playing, as well as when teams may be frustrated being unable to create any offense. We will use a stacked bar plot to contrast shot types before and after a goal has been scored. We will also visualize positions of shots before a goal has been scored.
 
-![Distribution of Shot Types Before and After a Goal Has Been Scored](/shot_types_before_and_after_goals_scored.png)
+![Distribution of Shot Types Before and After a Goal Has Been Scored](/projects/hockey_shot_analysis/images/shot_types_before_and_after_goals_scored.png)
 
-![Shot Positions Before a Goal Has Been Scored](/shot_types_before_and_after_goals_scored.png)
+![Shot Positions Before a Goal Has Been Scored](/projects/hockey_shot_analysis/images/shot_types_before_and_after_goals_scored.png)
 
 The final scenario is shot types during the shootout. We will again use a stacked bar plot to contrast shot types in the shootout in games where goals were scored and games where there were no goals. We will visualize the position of these goals as well.
 
-![Distribution of Shootout Goals by Shot Type](/shootout_goals.png)
+![Distribution of Shootout Goals by Shot Type](/projects/hockey_shot_analysis/images/shootout_goals.png)
 
-![Position of Shootout Goals](/shootout_goal_positions.png)
+![Position of Shootout Goals](/projects/hockey_shot_analysis/images/shootout_goal_positions.png)
 
 
 ### All-Star vs. League-Average Analysis
@@ -137,31 +137,31 @@ The final scenario is shot types during the shootout. We will again use a stacke
 In this part of the analysis, we wanted to look if there were any distinguishable key differences in All-Star player scoring versus League Average. Using the hockey-reference all-star data from the 2010-2020 seasons, we gathered the most frequent all-star players to visualize scoring patterns, goal/shot heatmaps, and K-Means clustering on goals. On the other side, we defined League-Average players as players aged 20-30 in the 2010-2020 seasons, fitting between the mean and one standard deviation of points scored for both offense and defensive positions. From there, we plotted the same visualizations as the All-Stars to see if there were any key differences between the two. 
 
 Below is the distribution for League-Average Offense and Defense Players in terms of points
-![Offensive Production Distribution](/offensive_production_distribution.png)
+![Offensive Production Distribution](/projects/hockey_shot_analysis/images/offensive_production_distribution.png)
 
-![Defensive Production Distribution](/defensive_production_distribution.png)
+![Defensive Production Distribution](/projects/hockey_shot_analysis/images/defensive_production_distribution.png)
 
 We first analysed the heatmap of goals from each group of players, seeing if there are any key differences in point production locations using the Seaborn heatmap visualization
 
-![League-Average Goal Heatmap](/league_average_offenseman_goal_heatmap.png)
+![League-Average Goal Heatmap](/projects/hockey_shot_analysis/images/league_average_offenseman_goal_heatmap.png)
 
-![All-Star Goal Heatmap](/all_star_shot_goal_heatmap.png)
+![All-Star Goal Heatmap](/projects/hockey_shot_analysis/images/all_star_shot_goal_heatmap.png)
 
 We see there is quite a difference in some players veruss one another, we see that generally all-star players have a more defined goal production location on the ice, versus league average having production from everywhere, meaning they are taking less set up shots and shoot the puck from wherever they can. 
 
 Next, we can see the difference in goals scored by period
 
-![All-Star Goal Scoring by Period](/all_star_goal_scoring_by_period.png)
+![All-Star Goal Scoring by Period](/projects/hockey_shot_analysis/images/all_star_goal_scoring_by_period.png)
 
-![League-Average Goal Scoring by Period](/league_average_goals_by_period.png)
+![League-Average Goal Scoring by Period](/projects/hockey_shot_analysis/images/league_average_goals_by_period.png)
 
 From this we can see the two groups have the opposite of goal scoring from one another. Where League-Average is scoring mostly in the first period, and every period after the goal totals fall off. The exact opposite is seen with the All-Stars, as they score the most goals in the second and third period. 
 
 Lastly, we will look at the K-Means clustering for both groups, seeing where the main locations are for goals scored across the group totals, instead of individual players. 
 
-![K-Means Clustering for Goals Scored for All-Stars](/all_star_goal_clustering.png)
+![K-Means Clustering for Goals Scored for All-Stars](/projects/hockey_shot_analysis/images/all_star_goal_clustering.png)
 
-![K-Means Clustering for Goals Scored for League-Average](/league_average_goal_clustering.png)
+![K-Means Clustering for Goals Scored for League-Average](/projects/hockey_shot_analysis/images/league_average_goal_clustering.png)
 
 The centroid locations for both groups are quite different from one another. A key difference is the third centroid being in the own teams zone for All-Stars, this points to all of the empty net goals scored by All-Star players in the last minutes of the game. Meaning that they are going to be on the ice more versus the league-average players. 
 

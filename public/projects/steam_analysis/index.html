@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="robots" content="noodp" />
+        <title>Analyzing Steam Libraries and Reviews - Matthew Zirpoli</title><meta name="Description" content="Matt Zirpoli - Data Science"><meta property="og:url" content="http://localhost:1313/projects/steam_analysis/">
+  <meta property="og:site_name" content="Matthew Zirpoli">
+  <meta property="og:title" content="Analyzing Steam Libraries and Reviews">
+  <meta property="og:description" content="Introduction Steam is a digital video game distribution service and storefront that is developed by the Valve Corporation. It was released in 2003 to distribute only Valve developed games as a means to play their video games on PC, and later updated in 2005 to distribute third-party titles as well. Steam quickly gained market traction and currently is the most popular storefront service for PC gaming, attracting millions of players. As Steam services millions of users in the PC gaming market, data gained from its storefront can be very useful in identifying trends within the video gaming market. This data could be used to understand genres that are gaining traction amongst fans, predict the success of future titles, and better understand consumer behavior. The video game market is a large and growing industry, with larger revenues than many film and TV enterprises. Additionally, there has been a marked shift away from titles developed by large companies and toward independent developers. Some popular indie titles, like Balatro and Stardew Valley, were developed by a single person and have become enormous successes, leading their creators to massive wealth. This highlights the opportunity in analyzing consumer data from a platform like Steam. If we can understand the consumers likes and dislikes, there is a huge economic opportunity to use that data to formulate a successful game. Through data visualization and statistical analysis, we can explore some user behaviors and game trends.">
+  <meta property="og:locale" content="en">
+  <meta property="og:type" content="article">
+    <meta property="article:section" content="projects">
+    <meta property="article:published_time" content="2025-06-15T18:49:04-06:00">
+    <meta property="article:modified_time" content="2025-06-15T19:48:27-06:00">
+
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="Analyzing Steam Libraries and Reviews">
+  <meta name="twitter:description" content="Introduction Steam is a digital video game distribution service and storefront that is developed by the Valve Corporation. It was released in 2003 to distribute only Valve developed games as a means to play their video games on PC, and later updated in 2005 to distribute third-party titles as well. Steam quickly gained market traction and currently is the most popular storefront service for PC gaming, attracting millions of players. As Steam services millions of users in the PC gaming market, data gained from its storefront can be very useful in identifying trends within the video gaming market. This data could be used to understand genres that are gaining traction amongst fans, predict the success of future titles, and better understand consumer behavior. The video game market is a large and growing industry, with larger revenues than many film and TV enterprises. Additionally, there has been a marked shift away from titles developed by large companies and toward independent developers. Some popular indie titles, like Balatro and Stardew Valley, were developed by a single person and have become enormous successes, leading their creators to massive wealth. This highlights the opportunity in analyzing consumer data from a platform like Steam. If we can understand the consumers likes and dislikes, there is a huge economic opportunity to use that data to formulate a successful game. Through data visualization and statistical analysis, we can explore some user behaviors and game trends.">
+<meta name="application-name" content="My cool site">
+<meta name="apple-mobile-web-app-title" content="My cool site">
+<meta name="referrer" content="no-referrer" /><meta name="theme-color" content="#ffffff"><meta name="msapplication-TileColor" content="#da532c"><link rel="shortcut icon" type="image/x-icon" href="/favicon.ico" />
+        <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+        <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png"><link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png"><link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5"><link rel="manifest" href="/site.webmanifest"><link rel="canonical" href="http://localhost:1313/projects/steam_analysis/" /><link rel="stylesheet" href="/css/style.min.css"><link rel="preload" href="/lib/fontawesome-free/css/all.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+        <noscript><link rel="stylesheet" href="/lib/fontawesome-free/css/all.min.css"></noscript><link rel="preload" href="/lib/animate/animate.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+        <noscript><link rel="stylesheet" href="/lib/animate/animate.min.css"></noscript><script type="application/ld+json">
+    {
+        "@context": "http://schema.org",
+        "@type": "BlogPosting",
+        "headline": "Analyzing Steam Libraries and Reviews",
+        "inLanguage": "en",
+        "mainEntityOfPage": {
+            "@type": "WebPage",
+            "@id": "http:\/\/localhost:1313\/projects\/steam_analysis\/"
+        },"genre": "projects","wordcount":  755 ,
+        "url": "http:\/\/localhost:1313\/projects\/steam_analysis\/","datePublished": "2025-06-15T18:49:04-06:00","dateModified": "2025-06-15T19:48:27-06:00","publisher": {
+            "@type": "Organization",
+            "name": ""},"author": {
+                "@type": "Person",
+                "name": "Matthew Zirpoli"
+            },"description": ""
+    }
+    </script></head>
+    <body data-header-desktop="fixed" data-header-mobile="auto"><script>(window.localStorage && localStorage.getItem('theme') ? localStorage.getItem('theme') === 'dark' : ('auto' === 'auto' ? window.matchMedia('(prefers-color-scheme: dark)').matches : 'auto' === 'dark')) && document.body.setAttribute('theme', 'dark');</script>
+
+        <div id="mask"></div><div class="wrapper"><header class="desktop" id="header-desktop">
+    <div class="header-wrapper">
+        <div class="header-title">
+            <a href="/" title="Matthew Zirpoli">Matthew Zirpoli</a>
+        </div>
+        <div class="menu">
+            <div class="menu-inner"><a class="menu-item" href="/about/" title="My Career Journey, Skills, and Resume"> About Me </a><a class="menu-item" href="/posts/"> Posts </a><a class="menu-item" href="/projects/"> Projects </a><a class="menu-item" href="/tags/"> Tags </a><span class="menu-item delimiter"></span><a href="javascript:void(0);" class="menu-item theme-switch" title="Switch Theme">
+                    <i class="fas fa-adjust fa-fw" aria-hidden="true"></i>
+                </a></div>
+        </div>
+    </div>
+</header><header class="mobile" id="header-mobile">
+    <div class="header-container">
+        <div class="header-wrapper">
+            <div class="header-title">
+                <a href="/" title="Matthew Zirpoli">Matthew Zirpoli</a>
+            </div>
+            <div class="menu-toggle" id="menu-toggle-mobile">
+                <span></span><span></span><span></span>
+            </div>
+        </div>
+        <div class="menu" id="menu-mobile"><a class="menu-item" href="/about/" title="My Career Journey, Skills, and Resume">About Me</a><a class="menu-item" href="/posts/" title="">Posts</a><a class="menu-item" href="/projects/" title="">Projects</a><a class="menu-item" href="/tags/" title="">Tags</a><a href="javascript:void(0);" class="menu-item theme-switch" title="Switch Theme">
+                <i class="fas fa-adjust fa-fw" aria-hidden="true"></i>
+            </a></div>
+    </div>
+</header><main class="main">
+                <div class="container"><div class="page single special"><h1 class="single-title animate__animated animate__pulse animate__faster">Analyzing Steam Libraries and Reviews</h1><div class="content" id="content"><h2 id="introduction">Introduction</h2>
+<p>Steam is a digital video game distribution service and storefront that is developed by the Valve Corporation. It was released in 2003 to distribute only Valve developed games as a means to play their video games on PC, and later updated in 2005 to distribute third-party titles as well. Steam quickly gained market traction and currently is the most popular storefront service for PC gaming, attracting millions of players. As Steam services millions of users in the PC gaming market, data gained from its storefront can be very useful in identifying trends within the video gaming market. This data could be used to understand genres that are gaining traction amongst fans, predict the success of future titles, and better understand consumer behavior. The video game market is a large and growing industry, with larger revenues than many film and TV enterprises. Additionally, there has been a marked shift away from titles developed by large companies and toward independent developers. Some popular indie titles, like Balatro and Stardew Valley, were developed by a single person and have become enormous successes, leading their creators to massive wealth. This highlights the opportunity in analyzing consumer data from a platform like Steam. If we can understand the consumers likes and dislikes, there is a huge economic opportunity to use that data to formulate a successful game. Through data visualization and statistical analysis, we can explore some user behaviors and game trends.</p>
+<h2 id="analysis-questions">Analysis Questions</h2>
+<ol>
+<li>How many games does each user own? How long do they play each title for, on average?</li>
+<li>How often do users leave reviews? Are they reviewing for each title in their library, or only some titles?</li>
+<li>What is the overall distribution of ratings in user reviews? Does the average review skew a certain direction?</li>
+<li>When are most games released? Is there a steady release of titles through the year or does one season dominate with releases?</li>
+<li>What games have the highest play time numbers? Is there commonality between genre or review ratings?</li>
+</ol>
+<h2 id="data-sourcing-and-justification">Data Sourcing and Justification</h2>
+<p>The data source for this project is the Game Recommendations on Steam dataset on the Kaggle platform. The data was collected using the Steam API, and the user information was anonymized behind user ids to protect privacy. The set itself is comprised of 3 tables, users, games, and recommendations. The games data includes basic identifying information like title and release date, operating systems the game is compatible with, original price and current pricing information, and some aggregated information from the recommendations table. The recommendations table includes information about reviews left on games, the user who made the review and how many hours they&rsquo;ve played, the game id, and aggregate votes of whether the review was helpful or funny. The users table contains user id, and counts of the number of products owned and reviews left.</p>
+<p>This data set was selected as Steam is the most used PC storefront. For a better, more encompassing analysis of the entire games market, it would be wise to incorporate data from Sony and Microsoft&rsquo;s console storefronts, as well as mobile storefronts like Google Play and Apple, however this data is proprietary. Steam, which supports open source, makes this data available, and due to its popularity, also makes this set a great option to make conclusions regarding the PC market. The insights gained here will be valuable, but it is important to note they may not extend to the console or mobile markets in the same way.</p>
+<h2 id="data-cleaning">Data Cleaning</h2>
+<p>Minimal cleaning was needed for this dataset. Each table was imported into a pandas dataframe and inspected for missing values and duplicates, none were found. Numerical features were inspected using Additionally, the data was inspected for outliers in numerical and date columns, dates consistently fell between 1997 and 2023, which are the expected extents of the data, numerical columns found no outliers through inspection with <code>pd.describe</code> and distribution plots. Since we are focused on user engagement and acquisition, we will omit users that have accounts but have not left reviews or purchased games, this will be done using inner joins when joining the user and recommendation tables.</p>
+<h2 id="visualizations-and-findings">Visualizations and Findings</h2>
+<p>Many users have signed up for Steam but have not played any games</p>
+<p><img
+        class="lazyload"
+        src="/svg/loading.min.svg"
+        data-src="/projects/steam_analysis/images/hours_played_box.png"
+        data-srcset="/projects/steam_analysis/images/hours_played_box.png, /projects/steam_analysis/images/hours_played_box.png 1.5x, /projects/steam_analysis/images/hours_played_box.png 2x"
+        data-sizes="auto"
+        alt="/projects/steam_analysis/images/hours_played_box.png"
+        title="Hours Played by user Boxplot" /></p>
+<p>Users have mostly played 100s or 1000s of hours, when excluding those who haven&rsquo;t played at all. Some users have played many, many hours</p>
+<p><img
+        class="lazyload"
+        src="/svg/loading.min.svg"
+        data-src="/projects/steam_analysis/images/hours_played_distribution.png"
+        data-srcset="/projects/steam_analysis/images/hours_played_distribution.png, /projects/steam_analysis/images/hours_played_distribution.png 1.5x, /projects/steam_analysis/images/hours_played_distribution.png 2x"
+        data-sizes="auto"
+        alt="/projects/steam_analysis/images/hours_played_distribution.png"
+        title="Hours Played by user Log Distribution" /></p>
+<p>Reviews skew positive on Steam, but users are not typically leaving reviews on many games</p>
+<p><img
+        class="lazyload"
+        src="/svg/loading.min.svg"
+        data-src="/projects/steam_analysis/images/review_dist.png"
+        data-srcset="/projects/steam_analysis/images/review_dist.png, /projects/steam_analysis/images/review_dist.png 1.5x, /projects/steam_analysis/images/review_dist.png 2x"
+        data-sizes="auto"
+        alt="/projects/steam_analysis/images/review_dist.png"
+        title="Distribution of Review Sentiment" /></p>
+<p>Number of releases on Steam and in general have increased steadily with time</p>
+<p><img
+        class="lazyload"
+        src="/svg/loading.min.svg"
+        data-src="/projects/steam_analysis/images/release_trend.png"
+        data-srcset="/projects/steam_analysis/images/release_trend.png, /projects/steam_analysis/images/release_trend.png 1.5x, /projects/steam_analysis/images/release_trend.png 2x"
+        data-sizes="auto"
+        alt="/projects/steam_analysis/images/release_trend.png"
+        title="Number of Releases over Time" /></p>
+</div></div></div>
+            </main><footer class="footer">
+        <div class="footer-container"><div class="footer-line">Powered by <a href="https://gohugo.io/" target="_blank" rel="noopener noreffer" title="Hugo 0.145.0">Hugo</a> | Theme - <a href="https://github.com/dillonzq/LoveIt" target="_blank" rel="noopener noreffer" title="LoveIt 0.3.1-DEV"><i class="far fa-kiss-wink-heart fa-fw" aria-hidden="true"></i> LoveIt</a>
+                </div><div class="footer-line" itemscope itemtype="http://schema.org/CreativeWork"><i class="far fa-copyright fa-fw" aria-hidden="true"></i><span itemprop="copyrightYear">2025</span><span class="author" itemprop="copyrightHolder">&nbsp;<a href="https://github.com/mattzirp/" target="_blank">Matthew Zirpoli</a></span>&nbsp;|&nbsp;<span class="license"><a rel="license external nofollow noopener noreffer" href="https://creativecommons.org/licenses/by-nc/4.0/" target="_blank">CC BY-NC 4.0</a></span></div>
+        </div>
+    </footer></div>
+
+        <div id="fixed-buttons"><a href="#" id="back-to-top" class="fixed-button" title="Back to Top">
+                <i class="fas fa-arrow-up fa-fw" aria-hidden="true"></i>
+            </a>
+        </div>
+
+        <div id="fixed-buttons-hidden"><a href="#" id="view-comments" class="fixed-button" title="View Comments">
+                <i class="fas fa-comment fa-fw" aria-hidden="true"></i>
+            </a>
+        </div><script src="/lib/lazysizes/lazysizes.min.js"></script><script src="/lib/clipboard/clipboard.min.js"></script><script src="/lib/sharer/sharer.min.js"></script><script>window.config={"comment":{}};</script><script src="/js/theme.min.js"></script></body>
+</html>

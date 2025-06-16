@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Projects on Matthew Zirpoli</title>
+    <link>http://localhost:1313/projects/</link>
+    <description>Recent content in Projects on Matthew Zirpoli</description>
+    <generator>Hugo</generator>
+    <language>en</language>
+    <managingEditor>zirpoli.matthew@gmail.com (Matthew Zirpoli)</managingEditor>
+    <webMaster>zirpoli.matthew@gmail.com (Matthew Zirpoli)</webMaster>
+    <lastBuildDate>Sun, 15 Jun 2025 19:48:27 -0600</lastBuildDate>
+    <atom:link href="http://localhost:1313/projects/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Analyzing Steam Libraries and Reviews</title>
+      <link>http://localhost:1313/projects/steam_analysis/</link>
+      <pubDate>Sun, 15 Jun 2025 18:49:04 -0600</pubDate><author>zirpoli.matthew@gmail.com (Matthew Zirpoli)</author>
+      <guid>http://localhost:1313/projects/steam_analysis/</guid>
+      <description>&lt;h2 id=&#34;introduction&#34;&gt;Introduction&lt;/h2&gt;&#xA;&lt;p&gt;Steam is a digital video game distribution service and storefront that is developed by the Valve Corporation. It was released in 2003 to distribute only Valve developed games as a means to play their video games on PC, and later updated in 2005 to distribute third-party titles as well. Steam quickly gained market traction and currently is the most popular storefront service for PC gaming, attracting millions of players. As Steam services millions of users in the PC gaming market, data gained from its storefront can be very useful in identifying trends within the video gaming market. This data could be used to understand genres that are gaining traction amongst fans, predict the success of future titles, and better understand consumer behavior. The video game market is a large and growing industry, with larger revenues than many film and TV enterprises. Additionally, there has been a marked shift away from titles developed by large companies and toward independent developers. Some popular indie titles, like Balatro and Stardew Valley, were developed by a single person and have become enormous successes, leading their creators to massive wealth. This highlights the opportunity in analyzing consumer data from a platform like Steam. If we can understand the consumers likes and dislikes, there is a huge economic opportunity to use that data to formulate a successful game. Through data visualization and statistical analysis, we can explore some user behaviors and game trends.&lt;/p&gt;</description>
+    </item>
+  </channel>
+</rss>

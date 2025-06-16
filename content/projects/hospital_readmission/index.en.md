@@ -1,7 +1,7 @@
 ---
 title: "Analyzing Short-Term Hospital Readmissions Using the MIMIC-III Dataset"
 date: 2025-06-15T18:45:52-06:00
-draft: true
+draft: false
 ---
 
 ## Introduction
@@ -53,28 +53,28 @@ The overall readmission rate for the selected patient population was 5.78%. This
 
 Examining by demographics, we see a few concerning numbers. First, looking by patient enthnicity, we note that Black patients experience the worst readmission rates at about double the rate of White and Asian patients. Hispanic/Latino patients experience slightly higher rates of readmission, as well. Middle Eastern (18%) and Indigenous (10%) patients also showed elevated rates of readmission, but the number of patients was low, and we chose not to include them as the small sample size does not allow us to draw conclusions in good faith. This result shows that some enthicities are not receiving the same level of care as others.
 
-![Readmission rate by enthnicity](/ethnicity.png)
+![Readmission rate by enthnicity](/projects/hopsital_readmission/images/ethnicity.png)
 
 Examining by gender, we see no notable gender gap in this aspect. Males and Females have nearly the same admission rate, and they are both right around the overall average.
 
-![Readmission rate by gender](/gender.png)
+![Readmission rate by gender](/projects/hopsital_readmission/images/gender.png)
 
 Examining by age, there is some variation, but for the most part each age cohort hovers around the overall readmission rate. Unexpectedly, the rate does not increase linearly with age. The age cohort of 30-39 has the highest readmission rate, which may suggest that in young people who are early to develop serious conditions, doctors are quick to write symptoms off because of the patient's age. Overall, though age does not seem to correlate much with readmission.
 
-![Readmission rate by age](/age.png)
+![Readmission rate by age](/projects/hopsital_readmission/images/age.png)
 
 Examining by Marital status, we note that those who are separated and single experience the highest levels of readmission, while Married men and women have the best outcomes. This could suggest the presence of a built in patient advocate in your spouse leads to better outcomes, or perhaps that people who have successful relationships are better at communicating their needs.
 
-![Readmission rate by marital status](/marital_status.png)
+![Readmission rate by marital status](/projects/hopsital_readmission/images/marital_status.png)
 
 When inspecting by insurance type, we can see that publically funded insurance options have higher readmission rates than those with private insurance. This is concerning, and could indicate  We also note that Self pay patients are readmitted at a much lower rate than the overall readmission rate. At first glance, this may seem like a good thing, but likely tells us a disturbing story of those who can not afford care avoiding it as much as possible, even when something may be wrong. 
 
-![Insurance type bar chart](/insurance_type.png)
+![Insurance type bar chart](/projects/hopsital_readmission/images/insurance_type.png)
 
 From inspecting comorbidities, we can conclude with certainty that more comorbidities leads to a higher readmission rate. This makes sense, as comorbidities will make it harder for a doctor to diagnose issues and more likely to get it wrong. Perhaps this indicates an opportunity for diagnoses that could leverage machine-learning in these advanced cases where it is difficult for a doctor to process the many factors of a complex patient. 
 
-![Readmission rate by comorbidity score](/comorbidities.png)
+![Readmission rate by comorbidity score](/projects/hopsital_readmission/images/comorbidities.png)
 
 Finally, we examine by the patient's length of stay. We might expect to see here that patient's who stayed a short period of time were readmitted more often due to not receiving the attention and care they needed. However, we do not observe this trend and conclude that length of stay does not correlate with readmission. 
 
-![Readmission rate by length of stay](/length_of_stay.png)
+![Readmission rate by length of stay](/projects/hopsital_readmission/images/length_of_stay.png)

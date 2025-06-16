@@ -1,7 +1,7 @@
 ---
 title: "Analyzing Steam Libraries and Reviews"
 date: 2025-06-15T18:49:04-06:00
-draft: true
+draft: false
 ---
 
 ## Introduction
@@ -29,17 +29,17 @@ Minimal cleaning was needed for this dataset. Each table was imported into a pan
 
 Many users have signed up for Steam but have not played any games
 
-![Hours Played by user Boxplot](/hours_played_box.png)
+![Hours Played by user Boxplot](/projects/steam_analysis/images/hours_played_box.png)
 
 
 Users have mostly played 100s or 1000s of hours, when excluding those who haven't played at all. Some users have played many, many hours
 
-![Hours Played by user Log Distribution](/hours_played_distribution.png)
+![Hours Played by user Log Distribution](/projects/steam_analysis/images/hours_played_distribution.png)
 
 Reviews skew positive on Steam, but users are not typically leaving reviews on many games
 
-![Distribution of Review Sentiment](/review_dist.png)
+![Distribution of Review Sentiment](/projects/steam_analysis/images/review_dist.png)
 
 Number of releases on Steam and in general have increased steadily with time
 
-![Number of Releases over Time](/release_trend.png)
+![Number of Releases over Time](/projects/steam_analysis/images/release_trend.png)
