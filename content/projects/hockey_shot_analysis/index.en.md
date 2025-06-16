@@ -1,7 +1,7 @@
 ---
 title: "Analysis of Shots and Goals from NHL Events Data"
 date: 2025-06-15T19:07:13-06:00
-draft: true
+draft: false
 ---
 This project was completed as the capstone for the University of Calgary course DATA601 - Working with Data and Visualization. Our team is made up of:
 
