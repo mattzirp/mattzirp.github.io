@@ -34,6 +34,14 @@ ignoreErrors = ["error-remote-getjson", "error-missing-instagram-accesstoken"]
     title = ""
   [[menu.main]]
     weight = 3
+    identifier = "projects"
+    pre = ""
+    post = ""
+    name = "Projects"
+    url = "/projects/"
+    title = ""
+  [[menu.main]]
+    weight = 4
     identifier = "tags"
     pre = ""
     post = ""

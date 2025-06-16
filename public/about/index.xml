@@ -1,18 +1,14 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Abouts on </title>
-    <link>//localhost:1313/about/</link>
-    <description>Recent content in Abouts on </description>
+    <title>About Me on Matthew Zirpoli</title>
+    <link>http://localhost:1313/about/</link>
+    <description>Recent content in About Me on Matthew Zirpoli</description>
     <generator>Hugo</generator>
     <language>en</language>
-    <atom:link href="//localhost:1313/about/index.xml" rel="self" type="application/rss+xml" />
-    <item>
-      <title></title>
-      <link>//localhost:1313/about/about/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>//localhost:1313/about/about/</guid>
-      <description>&lt;h1 id=&#34;about-me&#34;&gt;About Me&lt;/h1&gt;&#xA;&lt;p&gt;Hi, I&amp;rsquo;m Matt.&lt;/p&gt;</description>
-    </item>
+    <managingEditor>zirpoli.matthew@gmail.com (Matthew Zirpoli)</managingEditor>
+    <webMaster>zirpoli.matthew@gmail.com (Matthew Zirpoli)</webMaster>
+    <lastBuildDate></lastBuildDate>
+    <atom:link href="http://localhost:1313/about/index.xml" rel="self" type="application/rss+xml" />
   </channel>
 </rss>

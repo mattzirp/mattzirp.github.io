@@ -7,13 +7,13 @@
             <webMaster>zirpoli.matthew@gmail.com (Matthew Zirpoli)</webMaster><lastBuildDate>Sat, 14 Jun 2025 22:20:15 -0600</lastBuildDate>
             <atom:link href="http://localhost:1313/index.xml" rel="self" type="application/rss+xml" />
         <item>
-    <title></title>
-    <link>http://localhost:1313/posts/matt_harrison/</link>
-    <pubDate>Mon, 01 Jan 0001 00:00:00 &#43;0000</pubDate>
+    <title>What Effective Pandas Taught Me</title>
+    <link>http://localhost:1313/posts/effective_pandas/</link>
+    <pubDate>Sat, 14 Jun 2025 23:37:53 -0600</pubDate>
     <author>Matthew Zirpoli</author>
-    <guid>http://localhost:1313/posts/matt_harrison/</guid>
-    <description><![CDATA[<h1 id="what-matt-harrsion-taught-me-about-pandas">What Matt Harrsion Taught Me About Pandas</h1>
-<p>I first discovered Matt Harrison&rsquo;s work a few years ago when I made a concerted effort to learn the Python library pandas as expertly as I possibly could. Something from the Zen of Python that I feel often goes by the wayside is &ldquo;There should be one&ndash; and preferably only one &ndash;obvious way to do it.&rdquo; If you&rsquo;ve read any amount of the vast entry level sphere of Data Science how-tos, you&rsquo;ll know that this isn&rsquo;t how things are presented.</p>]]></description>
+    <guid>http://localhost:1313/posts/effective_pandas/</guid>
+    <description><![CDATA[<h2 id="background">Background</h2>
+<p>I first discovered Matt Harrison&rsquo;s work a few years ago when I made a concerted effort to learn the Python library pandas as expertly as I possibly could. I was doing a lot of data work at the time, and wanted to feel more confident and get more efficient working through long lists of servers from various systems in our environment. I had previously adopted the mentality that Python was a tool I was using to get things done. Sure, I tried to work some best practices into my code: using version control, doc strings, commenting some of my less intuitive lines, but a lot of other best practice advice features around shipping modules or apps, not data analysis. As a result, I would often share charts or export results to Excel, but I would never share my notebooks, and most times they wouldn&rsquo;t even run beginning to end, so good luck, future me!</p>]]></description>
 </item>
 </channel>
 </rss>

@@ -4,5 +4,29 @@
         <link>http://localhost:1313/tags/</link>
         <description>Tags - Tag - Matthew Zirpoli</description>
         <generator>Hugo -- gohugo.io</generator><language>en</language><managingEditor>zirpoli.matthew@gmail.com (Matthew Zirpoli)</managingEditor>
-            <webMaster>zirpoli.matthew@gmail.com (Matthew Zirpoli)</webMaster><atom:link href="http://localhost:1313/tags/" rel="self" type="application/rss+xml" /></channel>
+            <webMaster>zirpoli.matthew@gmail.com (Matthew Zirpoli)</webMaster><lastBuildDate>Sat, 14 Jun 2025 23:37:53 -0600</lastBuildDate><atom:link href="http://localhost:1313/tags/" rel="self" type="application/rss+xml" /><item>
+    <title>Books</title>
+    <link>http://localhost:1313/tags/books/</link>
+    <pubDate>Sat, 14 Jun 2025 23:37:53 -0600</pubDate>
+    <author>Matthew Zirpoli</author>
+    <guid>http://localhost:1313/tags/books/</guid>
+    <description><![CDATA[]]></description>
+</item>
+<item>
+    <title>Pandas</title>
+    <link>http://localhost:1313/tags/pandas/</link>
+    <pubDate>Sat, 14 Jun 2025 23:37:53 -0600</pubDate>
+    <author>Matthew Zirpoli</author>
+    <guid>http://localhost:1313/tags/pandas/</guid>
+    <description><![CDATA[]]></description>
+</item>
+<item>
+    <title>Python</title>
+    <link>http://localhost:1313/tags/python/</link>
+    <pubDate>Sat, 14 Jun 2025 23:37:53 -0600</pubDate>
+    <author>Matthew Zirpoli</author>
+    <guid>http://localhost:1313/tags/python/</guid>
+    <description><![CDATA[]]></description>
+</item>
+</channel>
 </rss>

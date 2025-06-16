@@ -3,8 +3,11 @@
     xmlns:xhtml="http://www.w3.org/1999/xhtml"
     ><url>
             <loc>http://localhost:1313/about/</loc><lastmod>2025-06-14T23:37:53-06:00</lastmod></url><url>
-            <loc>http://localhost:1313/</loc><lastmod>2025-06-14T22:20:15-06:00</lastmod></url><url>
-            <loc>http://localhost:1313/posts/matt_harrison/</loc><lastmod>2025-06-09T22:28:16-06:00</lastmod></url><url>
-            <loc>http://localhost:1313/categories/</loc></url><url>
-            <loc>http://localhost:1313/posts/</loc><lastmod>2025-06-09T22:28:16-06:00</lastmod></url><url>
-            <loc>http://localhost:1313/tags/</loc></url></urlset>
+            <loc>http://localhost:1313/tags/books/</loc><lastmod>2025-06-14T23:37:53-06:00</lastmod></url><url>
+            <loc>http://localhost:1313/tags/pandas/</loc><lastmod>2025-06-14T23:37:53-06:00</lastmod></url><url>
+            <loc>http://localhost:1313/posts/</loc><lastmod>2025-06-14T23:37:53-06:00</lastmod></url><url>
+            <loc>http://localhost:1313/tags/python/</loc><lastmod>2025-06-14T23:37:53-06:00</lastmod></url><url>
+            <loc>http://localhost:1313/tags/</loc><lastmod>2025-06-14T23:37:53-06:00</lastmod></url><url>
+            <loc>http://localhost:1313/posts/effective_pandas/</loc><lastmod>2025-06-14T23:37:53-06:00</lastmod></url><url>
+            <loc>http://localhost:1313/</loc><lastmod>2025-06-15T00:03:38-06:00</lastmod></url><url>
+            <loc>http://localhost:1313/categories/</loc></url></urlset>

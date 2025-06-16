@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="robots" content="noodp" />
+        <title>What Effective Pandas Taught Me - Matthew Zirpoli</title><meta name="Description" content="Matt Zirpoli - Data Science"><meta property="og:url" content="http://localhost:1313/posts/effective_pandas/">
+  <meta property="og:site_name" content="Matthew Zirpoli">
+  <meta property="og:title" content="What Effective Pandas Taught Me">
+  <meta property="og:description" content="Background I first discovered Matt Harrison’s work a few years ago when I made a concerted effort to learn the Python library pandas as expertly as I possibly could. I was doing a lot of data work at the time, and wanted to feel more confident and get more efficient working through long lists of servers from various systems in our environment. I had previously adopted the mentality that Python was a tool I was using to get things done. Sure, I tried to work some best practices into my code: using version control, doc strings, commenting some of my less intuitive lines, but a lot of other best practice advice features around shipping modules or apps, not data analysis. As a result, I would often share charts or export results to Excel, but I would never share my notebooks, and most times they wouldn’t even run beginning to end, so good luck, future me!">
+  <meta property="og:locale" content="en">
+  <meta property="og:type" content="article">
+    <meta property="article:section" content="posts">
+    <meta property="article:published_time" content="2025-06-14T23:37:53-06:00">
+    <meta property="article:modified_time" content="2025-06-14T23:37:53-06:00">
+    <meta property="article:tag" content="Python">
+    <meta property="article:tag" content="Pandas">
+    <meta property="article:tag" content="Books">
+
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="What Effective Pandas Taught Me">
+  <meta name="twitter:description" content="Background I first discovered Matt Harrison’s work a few years ago when I made a concerted effort to learn the Python library pandas as expertly as I possibly could. I was doing a lot of data work at the time, and wanted to feel more confident and get more efficient working through long lists of servers from various systems in our environment. I had previously adopted the mentality that Python was a tool I was using to get things done. Sure, I tried to work some best practices into my code: using version control, doc strings, commenting some of my less intuitive lines, but a lot of other best practice advice features around shipping modules or apps, not data analysis. As a result, I would often share charts or export results to Excel, but I would never share my notebooks, and most times they wouldn’t even run beginning to end, so good luck, future me!">
+<meta name="application-name" content="My cool site">
+<meta name="apple-mobile-web-app-title" content="My cool site">
+<meta name="referrer" content="no-referrer" /><meta name="theme-color" content="#ffffff"><meta name="msapplication-TileColor" content="#da532c"><link rel="shortcut icon" type="image/x-icon" href="/favicon.ico" />
+        <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+        <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png"><link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png"><link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5"><link rel="manifest" href="/site.webmanifest"><link rel="canonical" href="http://localhost:1313/posts/effective_pandas/" /><link rel="stylesheet" href="/css/style.min.css"><link rel="preload" href="/lib/fontawesome-free/css/all.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+        <noscript><link rel="stylesheet" href="/lib/fontawesome-free/css/all.min.css"></noscript><link rel="preload" href="/lib/animate/animate.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+        <noscript><link rel="stylesheet" href="/lib/animate/animate.min.css"></noscript><script type="application/ld+json">
+    {
+        "@context": "http://schema.org",
+        "@type": "BlogPosting",
+        "headline": "What Effective Pandas Taught Me",
+        "inLanguage": "en",
+        "mainEntityOfPage": {
+            "@type": "WebPage",
+            "@id": "http:\/\/localhost:1313\/posts\/effective_pandas\/"
+        },"genre": "posts","keywords": "Python, pandas, books","wordcount":  1139 ,
+        "url": "http:\/\/localhost:1313\/posts\/effective_pandas\/","datePublished": "2025-06-14T23:37:53-06:00","dateModified": "2025-06-14T23:37:53-06:00","publisher": {
+            "@type": "Organization",
+            "name": ""},"author": {
+                "@type": "Person",
+                "name": "Matthew Zirpoli"
+            },"description": ""
+    }
+    </script></head>
+    <body data-header-desktop="fixed" data-header-mobile="auto"><script>(window.localStorage && localStorage.getItem('theme') ? localStorage.getItem('theme') === 'dark' : ('auto' === 'auto' ? window.matchMedia('(prefers-color-scheme: dark)').matches : 'auto' === 'dark')) && document.body.setAttribute('theme', 'dark');</script>
+
+        <div id="mask"></div><div class="wrapper"><header class="desktop" id="header-desktop">
+    <div class="header-wrapper">
+        <div class="header-title">
+            <a href="/" title="Matthew Zirpoli">Matthew Zirpoli</a>
+        </div>
+        <div class="menu">
+            <div class="menu-inner"><a class="menu-item" href="/about/" title="My Career Journey, Skills, and Resume"> About Me </a><a class="menu-item" href="/posts/"> Posts </a><a class="menu-item" href="/tags/"> Tags </a><span class="menu-item delimiter"></span><a href="javascript:void(0);" class="menu-item theme-switch" title="Switch Theme">
+                    <i class="fas fa-adjust fa-fw" aria-hidden="true"></i>
+                </a></div>
+        </div>
+    </div>
+</header><header class="mobile" id="header-mobile">
+    <div class="header-container">
+        <div class="header-wrapper">
+            <div class="header-title">
+                <a href="/" title="Matthew Zirpoli">Matthew Zirpoli</a>
+            </div>
+            <div class="menu-toggle" id="menu-toggle-mobile">
+                <span></span><span></span><span></span>
+            </div>
+        </div>
+        <div class="menu" id="menu-mobile"><a class="menu-item" href="/about/" title="My Career Journey, Skills, and Resume">About Me</a><a class="menu-item" href="/posts/" title="">Posts</a><a class="menu-item" href="/tags/" title="">Tags</a><a href="javascript:void(0);" class="menu-item theme-switch" title="Switch Theme">
+                <i class="fas fa-adjust fa-fw" aria-hidden="true"></i>
+            </a></div>
+    </div>
+</header><main class="main">
+                <div class="container"><div class="toc" id="toc-auto">
+            <h2 class="toc-title">Contents</h2>
+            <div class="toc-content" id="toc-content-auto"></div>
+        </div><article class="page single"><h1 class="single-title animate__animated animate__flipInX">What Effective Pandas Taught Me</h1><h2 class="single-subtitle">Lessons from Matt Harrison&#39;s Opionated Pandas Style</h2><div class="post-meta">
+            <div class="post-meta-line"><span class="post-author"><a href="https://github.com/mattzirp/" title="Author" target="_blank" rel="noopener noreffer author" class="author"><i class="fas fa-user-circle fa-fw" aria-hidden="true"></i>Matthew Zirpoli</a></span></div>
+            <div class="post-meta-line"><i class="far fa-calendar-alt fa-fw" aria-hidden="true"></i>&nbsp;<time datetime="2025-06-14">2025-06-14</time>&nbsp;<i class="fas fa-pencil-alt fa-fw" aria-hidden="true"></i>&nbsp;1139 words&nbsp;
+                <i class="far fa-clock fa-fw" aria-hidden="true"></i>&nbsp;6 minutes&nbsp;</div>
+        </div><div class="details toc" id="toc-static"  data-kept="">
+                <div class="details-summary toc-title">
+                    <span>Contents</span>
+                    <span><i class="details-icon fas fa-angle-right" aria-hidden="true"></i></span>
+                </div>
+                <div class="details-content toc-content" id="toc-content-static"><nav id="TableOfContents">
+  <ul>
+    <li><a href="#background">Background</a></li>
+    <li><a href="#lessons-from-the-book">Lessons from the book</a>
+      <ul>
+        <li><a href="#1-use-method-chaining-to-make-your-pandas-code-read-like-a-recipe-and-eliminate-intermediate-object">1. Use method chaining to make your pandas code read like a recipe and eliminate intermediate object</a></li>
+        <li><a href="#2-keep-a-cell-or-two-at-the-top-of-your-jupyter-notebook-that-loads-your-raw-data-and-cleans-it-with-a-function">2. Keep a cell or two at the top of your Jupyter notebook that loads your raw data and cleans it with a function.</a></li>
+        <li><a href="#3-the-apply-method-is-slow-and-you-may-not-need-to-use-it">3. The .apply() method is slow, and you may not need to use it.</a></li>
+        <li><a href="#4-plotting-with-pandas-is-a-super-easy-one-liner">4. Plotting with pandas is a super easy one-liner</a></li>
+      </ul>
+    </li>
+    <li><a href="#wrapping-things-up">Wrapping things up</a></li>
+  </ul>
+</nav></div>
+            </div><div class="content" id="content"><h2 id="background">Background</h2>
+<p>I first discovered Matt Harrison&rsquo;s work a few years ago when I made a concerted effort to learn the Python library pandas as expertly as I possibly could. I was doing a lot of data work at the time, and wanted to feel more confident and get more efficient working through long lists of servers from various systems in our environment. I had previously adopted the mentality that Python was a tool I was using to get things done. Sure, I tried to work some best practices into my code: using version control, doc strings, commenting some of my less intuitive lines, but a lot of other best practice advice features around shipping modules or apps, not data analysis. As a result, I would often share charts or export results to Excel, but I would never share my notebooks, and most times they wouldn&rsquo;t even run beginning to end, so good luck, future me!</p>
+<p>Around this time, I heard Matt on an interview on the <a href="https://realpython.com/podcasts/rpp/103/" target="_blank" rel="noopener noreffer ">Real Python Podcast</a> and things started to click into place.
+Something from the Zen of Python that I feel often goes by the wayside is</p>
+<blockquote>
+<p>&ldquo;There should be one&ndash; and preferably only one &ndash;obvious way to do it.&rdquo;</p></blockquote>
+<p>If you&rsquo;ve read any amount of the vast entry level sphere of Data Science how-tos, you&rsquo;ll know that this isn&rsquo;t how things are presented. In fact, there are probably blogs out there that will tell you 10 different ways to do something and offer no opinion on which way might be best. That&rsquo;s what&rsquo;s so refreshing about Matt&rsquo;s work. He&rsquo;s got an opinion, there <em>is</em> a right way to do it, and he&rsquo;s here to share it. Once I heard the interview, I listened to few other sessions Matt had done, and decided to pick up his book <a href="https://store.metasnake.com/effective-pandas-book" target="_blank" rel="noopener noreffer ">Effective Pandas</a>Following his advice his sped up my code, and made my Jupyter notebooks much less daunting to return to in the future.</p>
+<h2 id="lessons-from-the-book">Lessons from the book</h2>
+<h3 id="1-use-method-chaining-to-make-your-pandas-code-read-like-a-recipe-and-eliminate-intermediate-object">1. Use method chaining to make your pandas code read like a recipe and eliminate intermediate object</h3>
+<p>This was my biggest takeaway from the book and had previously been one of my worst offenses. You may be familiar with pandas code that looks a bit like this:</p>
+<div class="code-block code-line-numbers open" style="counter-reset: code-block 0">
+    <div class="code-header language-">
+        <span class="code-title"><i class="arrow fas fa-angle-right fa-fw" aria-hidden="true"></i></span>
+        <span class="ellipses"><i class="fas fa-ellipsis-h fa-fw" aria-hidden="true"></i></span>
+        <span class="copy" title="Copy to clipboard"><i class="far fa-copy fa-fw" aria-hidden="true"></i></span>
+    </div><pre tabindex="0"><code>df = pd.read_csv(&#39;data.csv&#39;)
+df_filtered = df[df[&#39;column&#39;] &gt; 2]
+df_sorted = df_filtered.sort_values(&#39;column2&#39;)
+df_grouped = df_sorted.groupby(&#39;column3&#39;).sum() </code></pre></div>
+<p>At each step we create an intermediate DataFrame to store a result, but we only want the result of the final one. For me, this is a bit confusing to read. I can&rsquo;t be sure which DataFrame object is important and which is just a step along the path. With method chaining, the same result is achieved using this:</p>
+<div class="code-block code-line-numbers open" style="counter-reset: code-block 0">
+    <div class="code-header language-">
+        <span class="code-title"><i class="arrow fas fa-angle-right fa-fw" aria-hidden="true"></i></span>
+        <span class="ellipses"><i class="fas fa-ellipsis-h fa-fw" aria-hidden="true"></i></span>
+        <span class="copy" title="Copy to clipboard"><i class="far fa-copy fa-fw" aria-hidden="true"></i></span>
+    </div><pre tabindex="0"><code>df = pd.read_csv(&#39;data.csv&#39;)
+df_grouped = (df[df[&#39;column1&#39;]]
+                .sort_values(&#39;column2&#39;)
+                .groupby(&#39;column3&#39;).sum())</code></pre></div>
+<p>If you&rsquo;re not used to seeing code like this, it can take some getting used to, but eventually it starts to read like a recipe, or a to-do list. Start with this, then do this, next do this, etc. You also save your system a load of memory. Using method chaining has made it so much easier to go back to code and understand what I was doing. No more wondering</p>
+<h3 id="2-keep-a-cell-or-two-at-the-top-of-your-jupyter-notebook-that-loads-your-raw-data-and-cleans-it-with-a-function">2. Keep a cell or two at the top of your Jupyter notebook that loads your raw data and cleans it with a function.</h3>
+<p>This is a great practice to implement after doing your exploratory data analysis. You&rsquo;ve looked through the stuff you&rsquo;re interested in, got it clean the way you want it, and oh, oops it took you 50 cells to get there. Do you need all those cells? Does one of them actually ruin the state of your DataFrame so if you hit run above you end up with an error and a whole lot of frustration?</p>
+<p>Take the cleaning pipeline you applied and make it a function or a method chain expression. Move it into the cell below your data import. Now if you make a mistake and ruin your state, the kernel crashes, or you just walk away and forget, you&rsquo;re always just a few quick steps from starting over clean.</p>
+<h3 id="3-the-apply-method-is-slow-and-you-may-not-need-to-use-it">3. The .apply() method is slow, and you may not need to use it.</h3>
+<p>This one definitely had me wanting to click &ldquo;I&rsquo;m in this picture and I don&rsquo;t like it&rdquo; I learned Python a lot earlier than I ever touched pandas. When I first started with it, I was comfortable in the world of loops and I didn&rsquo;t fully understand how incredibly powerful the vectorized operations pandas uses are. As result, when I ran into something I didn&rsquo;t really know well enough in pandas, I just reach for the Python I knew through the <code>.apply()</code> function.</p>
+<p>Apply tells pandas to pull the data from your column, place it in a Python object if it&rsquo;s not a Python object and apply your defined Python function to that object, then return it to the DataFrame memory location. This is much, much slower than doing it within pandas. Because of this, you will get much better performance using other methods. Matt offers one exception here, and that&rsquo;s string data, because you often already aren&rsquo;t getting the benefit of vectorization. But anything numeric? Find the pandas function that suits your needs.</p>
+<h3 id="4-plotting-with-pandas-is-a-super-easy-one-liner">4. Plotting with pandas is a super easy one-liner</h3>
+<p>It might seem like a no-brainer to some, but I&rsquo;m not even sure I knew pandas could plot on its own before this book. Not only can it plot, but it&rsquo;s actually super simple. Check out this example from when I was working with some hockey events data. I wanted to know if the coordinates had been adjusted to appear on only one side of the ice. In the past I might&rsquo;ve tried to see if I had any negative x coordinates, but instead:</p>
+<div class="code-block code-line-numbers open" style="counter-reset: code-block 0">
+    <div class="code-header language-">
+        <span class="code-title"><i class="arrow fas fa-angle-right fa-fw" aria-hidden="true"></i></span>
+        <span class="ellipses"><i class="fas fa-ellipsis-h fa-fw" aria-hidden="true"></i></span>
+        <span class="copy" title="Copy to clipboard"><i class="far fa-copy fa-fw" aria-hidden="true"></i></span>
+    </div><pre tabindex="0"><code>(events
+    .plot
+    .scatter(&#39;xadj&#39;, &#39;yadj&#39;)
+)</code></pre></div>
+<p>One look at this chart told me all I needed to know. I didn&rsquo;t need to think, adjust any data, filter, or anything. All I had to do was take a quick look! I reach for this feature all the time now when I am doing exploratory data analysis, especially on a larger data set when I need a little more information about the data before proceeding. It took me from trying to parse through rows to visualizing and understanding quickly.</p>
+<h2 id="wrapping-things-up">Wrapping things up</h2>
+<p>Effective Pandas was a great read and is an awesome reference to have around for a bit of deep explanation on some common pandas brain-benders. There are a few more things from the book I&rsquo;d like to implement into my workflow, especially styling DataFrame outputs. It&rsquo;s been great to have cleaner notebooks that I can look back to and understand, and gaining confidence with some of the tougher pandas concepts has helped me immensely in my Masters program. As always, I&rsquo;m looking forward to learning more.</p>
+</div><div class="post-footer" id="post-footer">
+    <div class="post-info">
+        <div class="post-info-line">
+            <div class="post-info-mod">
+                <span>Updated on 2025-06-14</span>
+            </div></div>
+        <div class="post-info-line">
+            <div class="post-info-md"></div>
+            <div class="post-info-share">
+                <span><a href="javascript:void(0);" title="Share on X" data-sharer="x" data-url="http://localhost:1313/posts/effective_pandas/" data-title="What Effective Pandas Taught Me" data-hashtags="Python,pandas,books"><i class="fab fa-x-twitter fa-fw" aria-hidden="true"></i></a><a href="javascript:void(0);" title="Share on Threads" data-sharer="threads" data-url="http://localhost:1313/posts/effective_pandas/" data-title="What Effective Pandas Taught Me"><i class="fab fa-threads fa-fw" aria-hidden="true"></i></a><a href="javascript:void(0);" title="Share on Facebook" data-sharer="facebook" data-url="http://localhost:1313/posts/effective_pandas/" data-hashtag="Python"><i class="fab fa-facebook-square fa-fw" aria-hidden="true"></i></a><a href="javascript:void(0);" title="Share on Hacker News" data-sharer="hackernews" data-url="http://localhost:1313/posts/effective_pandas/" data-title="What Effective Pandas Taught Me"><i class="fab fa-hacker-news fa-fw" aria-hidden="true"></i></a><a href="javascript:void(0);" title="Share on Line" data-sharer="line" data-url="http://localhost:1313/posts/effective_pandas/" data-title="What Effective Pandas Taught Me"><i data-svg-src="/lib/simple-icons/icons/line.min.svg" aria-hidden="true"></i></a><a href="javascript:void(0);" title="Share on 微博" data-sharer="weibo" data-url="http://localhost:1313/posts/effective_pandas/" data-title="What Effective Pandas Taught Me"><i class="fab fa-weibo fa-fw" aria-hidden="true"></i></a><a href="javascript:void(0);" title="Share on Diaspora" data-sharer="diaspora" data-url="http://localhost:1313/posts/effective_pandas/" data-title="What Effective Pandas Taught Me" data-description=""><i class="fab fa-diaspora fa-fw" aria-hidden="true"></i></a><a href="https://t.me/share/url?url=http%3a%2f%2flocalhost%3a1313%2fposts%2feffective_pandas%2f&amp;text=What%20Effective%20Pandas%20Taught%20Me" target="_blank" title="Share on Telegram"><i class="fab fa-telegram fa-fw" aria-hidden="true"></i></a></span>
+            </div>
+        </div>
+    </div>
+
+    <div class="post-info-more">
+        <section class="post-tags"><i class="fas fa-tags fa-fw" aria-hidden="true"></i>&nbsp;<a href="/tags/python/">Python</a>,&nbsp;<a href="/tags/pandas/">Pandas</a>,&nbsp;<a href="/tags/books/">Books</a></section>
+        <section>
+            <span><a href="javascript:void(0);" onclick="window.history.back();">Back</a></span>&nbsp;|&nbsp;<span><a href="/">Home</a></span>
+        </section>
+    </div>
+
+    <div class="post-nav"></div>
+</div>
+</article></div>
+            </main><footer class="footer">
+        <div class="footer-container"><div class="footer-line">Powered by <a href="https://gohugo.io/" target="_blank" rel="noopener noreffer" title="Hugo 0.145.0">Hugo</a> | Theme - <a href="https://github.com/dillonzq/LoveIt" target="_blank" rel="noopener noreffer" title="LoveIt 0.3.1-DEV"><i class="far fa-kiss-wink-heart fa-fw" aria-hidden="true"></i> LoveIt</a>
+                </div><div class="footer-line" itemscope itemtype="http://schema.org/CreativeWork"><i class="far fa-copyright fa-fw" aria-hidden="true"></i><span itemprop="copyrightYear">2025</span><span class="author" itemprop="copyrightHolder">&nbsp;<a href="https://github.com/mattzirp/" target="_blank">Matthew Zirpoli</a></span>&nbsp;|&nbsp;<span class="license"><a rel="license external nofollow noopener noreffer" href="https://creativecommons.org/licenses/by-nc/4.0/" target="_blank">CC BY-NC 4.0</a></span></div>
+        </div>
+    </footer></div>
+
+        <div id="fixed-buttons"><a href="#" id="back-to-top" class="fixed-button" title="Back to Top">
+                <i class="fas fa-arrow-up fa-fw" aria-hidden="true"></i>
+            </a>
+        </div>
+
+        <div id="fixed-buttons-hidden"><a href="#" id="view-comments" class="fixed-button" title="View Comments">
+                <i class="fas fa-comment fa-fw" aria-hidden="true"></i>
+            </a>
+        </div><script src="/lib/lazysizes/lazysizes.min.js"></script><script src="/lib/clipboard/clipboard.min.js"></script><script src="/lib/sharer/sharer.min.js"></script><script>window.config={"comment":{}};</script><script src="/js/theme.min.js"></script></body>
+</html>
